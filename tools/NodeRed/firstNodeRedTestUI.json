@@ -1,0 +1,65 @@
+[
+    {
+        "id": "f4a6ac8a6a3f48c9",
+        "type": "ui_chart",
+        "z": "38c3c6817a06a8a5",
+        "name": "",
+        "group": "e06a4bada426da4f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 530,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e06a4bada426da4f",
+        "type": "ui_group",
+        "name": "2. DashGroup",
+        "tab": "9df4c82b6259113e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9df4c82b6259113e",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

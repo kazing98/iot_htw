@@ -15,6 +15,7 @@ def do_connect():
             pass
     print('network config:', wlan.ipconfig('addr4'))
     
+do_connect()
 
 d = dht.DHT22(machine.Pin(2))
 d.measure()

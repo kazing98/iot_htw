@@ -1,0 +1,23 @@
+[
+    {
+        "id": "8ac9ac193ac1b5a5",
+        "type": "function",
+        "z": "c56491544049e87d",
+        "name": "Fields and Tags",
+        "func": "const myhumi = msg.payload;\nmsg.payload = [{\n    humidity: myhumi,\n},\n{\n    tag: \"Rohan\",\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "2a44d17930243b93",
+                "36edb187f12ce181"
+            ]
+        ]
+    }
+]

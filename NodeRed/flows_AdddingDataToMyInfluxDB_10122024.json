@@ -144,6 +144,62 @@
         "h": 162
     },
     {
+        "id": "f50cef510833634c",
+        "type": "group",
+        "z": "c56491544049e87d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "bdfa0a59aea3852a",
+            "a318db8a7f21461c",
+            "d7bdde10c35ea241",
+            "01d3282cb079822c",
+            "2a44d17930243b93",
+            "8ac9ac193ac1b5a5",
+            "36edb187f12ce181",
+            "2751f7c7b43c27a6"
+        ],
+        "x": 204,
+        "y": 79,
+        "w": 642,
+        "h": 382
+    },
+    {
+        "id": "b5c8c917dfca45d6",
+        "type": "group",
+        "z": "c56491544049e87d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "2a87226f3e4dbb2c",
+            "f3e95c7e5afaaa0c",
+            "ef2365ce831d070a",
+            "16b344989671a843",
+            "41ee73a05e6f4856",
+            "ef31c2a124034368",
+            "4cac6a14b317285c",
+            "5560931826877e2a"
+        ],
+        "x": 184,
+        "y": 559,
+        "w": 642,
+        "h": 382
+    },
+    {
         "id": "6ba16d0e7d9f43d2",
         "type": "mqtt-broker",
         "name": "",
@@ -1712,7 +1768,8 @@
         "links": [
             "d20f5bcb6fb2059e",
             "01d3282cb079822c",
-            "98580412bf803035"
+            "98580412bf803035",
+            "16b344989671a843"
         ],
         "x": 95,
         "y": 540,
@@ -1957,7 +2014,8 @@
         "links": [
             "6cffe429774fbc5f",
             "2751f7c7b43c27a6",
-            "da17343f80358cb6"
+            "da17343f80358cb6",
+            "5560931826877e2a"
         ],
         "x": 75,
         "y": 780,
@@ -1967,6 +2025,7 @@
         "id": "bdfa0a59aea3852a",
         "type": "influxdb out",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "influxdb": "51bf54ee460daa61",
         "name": "Temperature Measurement",
         "measurement": "temperature",
@@ -1985,6 +2044,7 @@
         "id": "a318db8a7f21461c",
         "type": "function",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "name": "Fields and Tags",
         "func": "const mytemp = msg.payload;\nmsg.payload = [{\n    temperatue: mytemp,\n},\n{\n    tag: \"Rohan\",\n}];\nreturn msg;",
         "outputs": 1,
@@ -2006,6 +2066,7 @@
         "id": "d7bdde10c35ea241",
         "type": "debug",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "name": "debug 24",
         "active": true,
         "tosidebar": true,
@@ -2022,6 +2083,7 @@
         "id": "01d3282cb079822c",
         "type": "link in",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "name": "link in 5",
         "links": [
             "34b53435ad97f6a1"
@@ -2038,6 +2100,7 @@
         "id": "2a44d17930243b93",
         "type": "influxdb out",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "influxdb": "51bf54ee460daa61",
         "name": "Humidity Measurement",
         "measurement": "humidity",
@@ -2056,6 +2119,7 @@
         "id": "8ac9ac193ac1b5a5",
         "type": "function",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "name": "Fields and Tags",
         "func": "const myhumi = msg.payload;\nmsg.payload = [{\n    humidity: myhumi,\n},\n{\n    tag: \"Rohan\",\n}];\nreturn msg;",
         "outputs": 1,
@@ -2077,6 +2141,7 @@
         "id": "36edb187f12ce181",
         "type": "debug",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "name": "debug 25",
         "active": true,
         "tosidebar": true,
@@ -2093,6 +2158,7 @@
         "id": "2751f7c7b43c27a6",
         "type": "link in",
         "z": "c56491544049e87d",
+        "g": "f50cef510833634c",
         "name": "link in 6",
         "links": [
             "ebdc04a304f7ee98"
@@ -2104,5 +2170,175 @@
                 "8ac9ac193ac1b5a5"
             ]
         ]
+    },
+    {
+        "id": "2a87226f3e4dbb2c",
+        "type": "influxdb out",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "influxdb": "d4e3dc2aab0e4358",
+        "name": "Temperature Measurement",
+        "measurement": "temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "ProIT_IoT_2425",
+        "bucket": "sensor_data",
+        "x": 680,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "f3e95c7e5afaaa0c",
+        "type": "function",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "name": "Fields and Tags",
+        "func": "const mytemp = msg.payload;\nmsg.payload = [{\n    temperatue: mytemp,\n},\n{\n    tag: \"Rohan\",\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 820,
+        "wires": [
+            [
+                "2a87226f3e4dbb2c",
+                "ef2365ce831d070a"
+            ]
+        ]
+    },
+    {
+        "id": "ef2365ce831d070a",
+        "type": "debug",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "16b344989671a843",
+        "type": "link in",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "name": "link in 7",
+        "links": [
+            "34b53435ad97f6a1"
+        ],
+        "x": 225,
+        "y": 820,
+        "wires": [
+            [
+                "f3e95c7e5afaaa0c"
+            ]
+        ]
+    },
+    {
+        "id": "41ee73a05e6f4856",
+        "type": "influxdb out",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "influxdb": "d4e3dc2aab0e4358",
+        "name": "Humidity Measurement",
+        "measurement": "humidity",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "ProIT_IoT_2425",
+        "bucket": "sensor_data",
+        "x": 670,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "ef31c2a124034368",
+        "type": "function",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "name": "Fields and Tags",
+        "func": "const myhumi = msg.payload;\nmsg.payload = [{\n    humidity: myhumi,\n},\n{\n    tag: \"Rohan\",\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "41ee73a05e6f4856",
+                "4cac6a14b317285c"
+            ]
+        ]
+    },
+    {
+        "id": "4cac6a14b317285c",
+        "type": "debug",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5560931826877e2a",
+        "type": "link in",
+        "z": "c56491544049e87d",
+        "g": "b5c8c917dfca45d6",
+        "name": "link in 8",
+        "links": [
+            "ebdc04a304f7ee98"
+        ],
+        "x": 225,
+        "y": 600,
+        "wires": [
+            [
+                "ef31c2a124034368"
+            ]
+        ]
+    },
+    {
+        "id": "e44bc8c44e0702a0",
+        "type": "comment",
+        "z": "c56491544049e87d",
+        "name": "HTW InfluxDB",
+        "info": "",
+        "x": 110,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "04a419d10689a847",
+        "type": "comment",
+        "z": "c56491544049e87d",
+        "name": "Rohan InfluxDB",
+        "info": "",
+        "x": 120,
+        "y": 40,
+        "wires": []
     }
 ]

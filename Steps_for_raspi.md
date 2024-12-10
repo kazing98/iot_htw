@@ -1,4 +1,5 @@
 ##How to connect to Rasberry Pi ?
+=================================
 use this ssh pi@Raspi3E13.f4.htw-berlin.de    --> pi@Raspi3E13 -- Raspi3E13 is the number written on  rasberrypi
 
 Guest user for node-red (read only access):
@@ -7,7 +8,7 @@ pass - himbeere
 
 
 ##Flow File settings
-==================
+====================
 ✔ Enter a name for your flows file · flows.json
 pass - Shizuo@98
 

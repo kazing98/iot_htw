@@ -13,7 +13,7 @@ ap = network.WLAN(network.AP_IF)
 ap.active(False)
 wlan.active(True)
 wlan.scan()
-wlan.connect('HTW_H106_Rechnernetze', 'rnFIW625)
+wlan.connect('HTW_H106_Rechnernetze', 'rnFIW625')
 wlan.isconnected()
 wlan.ifconfig()
 
